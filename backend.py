@@ -42,7 +42,7 @@ def graph():
         df_copy.columns = ['ds', 'y']
         m.fit(df_copy)
         future = m.make_future_dataframe(periods=int(periods))
-        forecast = m.predict(future)     
+        forecast = m.predict(future)   
         return forecast.to_json(orient='records')
 
     except Exception as e:
