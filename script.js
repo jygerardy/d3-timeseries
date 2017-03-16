@@ -52,19 +52,9 @@ function buttonVizPressed() {
       var chart = d3.timeseries()
                 .addSerie(new_data,
                   {x : "ds",
-                   y : "yhat_upper",
-                   diff:'n1'},
-                   {interpolate:'monotone',color:"red"})
-                .addSerie(new_data,
-                  {x : "ds",
                    y : "yhat",
                    diff:'n1'},
                    {interpolate:'monotone',color:"#333"})
-                .addSerie(new_data,
-                  {x : "ds",
-                   y : "yhat_lower",
-                   diff:'n1'},
-                   {interpolate:'monotone',color:"red"})
                 .width(900);
 
 
