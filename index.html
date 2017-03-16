@@ -1,0 +1,64 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js'></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="d3_script.js"></script>
+    <script src="script.js"></script>
+
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.css">
+    <link rel="stylesheet" href="d3_style.css">
+
+    <title>Facebook Prophet</title>
+
+</head>
+
+<body>
+
+
+<!-- <link rel="stylesheet" href="style.css"> -->
+
+<h3> &Facebook Prophet Visualization </h3>
+
+<div class="col-xs-3">
+
+  <label for="ex1">Choose Date</label>
+  <div id="chooseDateDiv"></div >
+
+
+  <label for="chooseSeriesDiv">Choose Series</label>
+  <div id="chooseSeriesDiv"></div>
+
+<div class="form-group">
+  <label for="choosePeriods">Choose number of periods to forecast</label>
+  <input type="text" class="form-control" id="choosePeriods">
+</div>
+
+  <br/>
+  <div>
+      <button class = "btn btn-primary" type = "submit" onclick="buttonVizPressed()">Visualize</button>
+  </div>
+</div>
+
+<div class="col-xs-9">
+  <div style="width: 100%; overflow: hidden;">
+      <div id="graph-container" style="width: 600px; float: left;"> </div>
+  </div>
+</div>
+
+
+
+
+</body>

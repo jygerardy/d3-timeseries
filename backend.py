@@ -5,7 +5,7 @@ from fbprophet import Prophet
 
 app = Flask(__name__, static_folder='.', template_folder='.')
 
-data_dir = '/Users/katepomerant/Github/datatori/ds_codes/web_apps/timeseries/timeseries_interpolate/passengers_prepared.csv'
+
 m = Prophet()
 
 @app.route("/")
@@ -46,15 +46,12 @@ def graph():
         return forecast.to_json(orient='records')
 
     except Exception as e:
-        print("X"*100)
         print(e)
-        print("X"*100)
         return None
 
 if __name__ == "__main__":
 
-    #date_col  = request.args.get("date_col", None)
-    date_col = ['Month']
-    df = pd.read_csv(data_dir)
+    #date_col = ['Month']
+    df = pd.read_csv( './passengers_prepared.csv')
     
     app.run(debug=True)
